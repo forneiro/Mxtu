@@ -30,11 +30,11 @@ i {
 img {
     max-width: 100%;
 }
+
 section {
     margin-bottom: 6rem;
 }
 hr {
-    width: 80%;
     border-color: var(--gray);
     width: 20rem;
     margin: 0 0 1.6rem;
@@ -45,8 +45,9 @@ h3 {
     margin-bottom: 1rem;
 }
 .container {
-    max-width: 86%;
-    margin: 0 auto;
+    max-width: 90%;
+    padding-left: 12rem;
+    margin: 0 auto 0 auto;
 }
 /* SEPARATE */
 .principal-sections {
@@ -66,6 +67,7 @@ h3 {
     flex-direction: column;
     background-color: var(--nav_background);
     height: 100vh;
+    position: fixed;
 }
 .nav a {
     display: flex;
@@ -98,28 +100,38 @@ h3 {
     align-items: center;
     margin: 0;
     line-height: 1.6;
+    max-width: 100%;
 }
 
 /* PROJECTS */
 .projects {
-
+    max-width: 100%;
 } 
 .projects-container {
+    max-width: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    column-gap: 2rem;
+    flex-wrap: wrap;
+    column-gap: 1.4rem;
 }
-.project:hover, .project-title h4 {
-    cursor: pointer;
-}
-.project-title h4:hover, .project:hover > .project-title h4 {
-    border-bottom: 2px solid var(--white);
+.project {
+    flex: 32%;
+    max-width: 32%; /* Añade esto para asegurar que el contenedor sea flexible */
 }
 .project img {
-    height: 26rem;
+    display: block;
+    border-radius: 1rem;
+}
+@media (max-width: 992px) {
+    .project {
+        flex: 48%;
+        max-width: 48%; /* Añade esto para asegurar que el contenedor sea flexible */
+    }
 }
 .project-title {
     width: 80%;
+    padding: 1rem;
 }
 .project h4 {
     overflow: hidden;
@@ -127,9 +139,16 @@ h3 {
     text-overflow: ellipsis;
     border-bottom: 2px solid transparent;
 }
+.project:hover, .project-title h4 {
+    cursor: pointer;
+}
+.project-title h4:hover, .project:hover > .project-title h4 {
+    border-bottom: 2px solid var(--white);
+}
 
 /* Colaboraciones */
 .colaboraciones  {
     color: var(--white);
     text-align: center;
 }
+
