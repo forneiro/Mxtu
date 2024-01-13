@@ -1,0 +1,135 @@
+:root {
+    --black: #000;
+    --nav_background: #343434;
+    --white: rgba(255, 255, 255);
+    --gray: rgba(255, 255, 255, .6);
+    --rojo: #D64646;
+}
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+body {
+    background-color: var(--black);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: var(--white);
+}
+*, *::after, *::before {
+    box-sizing: inherit;
+}
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+i {
+    font-size: 2.8rem;
+    margin-bottom: .8rem;
+}
+img {
+    max-width: 100%;
+}
+section {
+    margin-bottom: 6rem;
+}
+hr {
+    width: 80%;
+    border-color: var(--gray);
+    width: 20rem;
+    margin: 0 0 1.6rem;
+}
+h3 {
+    font-weight: normal;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+.container {
+    max-width: 86%;
+    margin: 0 auto;
+}
+/* SEPARATE */
+.principal-sections {
+    display: flex;
+    justify-content: space-between;
+}
+.bg-header {
+    background-image: url(../img/banner.png);
+    height: 80rem;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    margin-bottom: 18rem;
+}
+.nav {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--nav_background);
+    height: 100vh;
+}
+.nav a {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    color: var(--white);
+    padding: 2rem 1rem;
+}
+.nav a:hover {
+    background-color: var(--black);
+}
+
+/* ABOUT */
+.about p {
+    color: var(--gray);
+}
+/* PROFILE INFO */
+.profile-info {
+    background-color: var(--white);
+    padding: 2rem 1rem;
+    border-radius: .2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+.profile-info p {
+    color: var(--black);
+    font-size: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* PROJECTS */
+.projects {
+
+} 
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+.project:hover, .project-title h4 {
+    cursor: pointer;
+}
+.project-title h4:hover, .project:hover > .project-title h4 {
+    border-bottom: 2px solid var(--white);
+}
+.project img {
+    height: 26rem;
+}
+.project-title {
+    width: 80%;
+}
+.project h4 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-bottom: 2px solid transparent;
+}
+
+/* Colaboraciones */
+.colaboraciones  {
+    color: var(--white);
+    text-align: center;
+}

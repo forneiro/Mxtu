@@ -1,0 +1,40 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  
+  .animacion-mxtu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    background-image: url(../img/logo_intro_mxtu.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10%;
+    opacity: 0;
+    transition: transform 1s, opacity 0.5s;
+  }
+  
+  .animacion-mxtu.animado {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.2);
+  }
+  
+  .overlay.animado {
+    opacity: 1;
+  }
+  .removeOverlay {
+    visibility: hidden;
+  }
+  .bg-header, .sobreMi {
+    visibility: hidden;
+  }
