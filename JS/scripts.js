@@ -32,10 +32,21 @@ sound.play();
 sound.fade(0, 1, 1000);  //Aumenta el volumen de 0 a 1 en 1 segundo (1000 milisegundos)
 
 
+
+// --------------------------------------------------------------------------------------------------------------
 document.addEventListener("DOMContentLoaded", function () {
-  document.addEventListener("scroll", function () {
-    var nav = document.querySelector(".nav");
-    nav.style.transform = "translateY(" + window.scrollY + "px)";
+  var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  var nav = document.querySelector(".nav");
+  var navResponsive = document.querySelector(".nav-responsive");
+
+  navResponsive.addEventListener('click', () => {
+    nav.classList.toggle('barra-lateral');
+  });
+  document.addEventListener('scroll', () => {
+    if (screenWidth) {
+      navResponsive.style.transform = "translateY(" + window.scrollY + "px";
+      nav.style.transform = "translateY(" + window.scrollY + "px";
+    }
   });
 
   var smoothScrollLinks = document.querySelectorAll('.smooth-scroll');
@@ -51,8 +62,22 @@ document.addEventListener("DOMContentLoaded", function () {
         targetElement.scrollIntoView({
           behavior: 'smooth'
         });
+        // Si el menú está abierto, ciérralo
+        if (isNavOpen) {
+          nav.style.transform = "translateX(-100%)";
+          isNavOpen = false;
+          // Restaurar el scroll de la página
+          document.body.style.overflow = "auto";
+        }
       }
     });
   });
 });
+
+
+
+
+
+
+
 
