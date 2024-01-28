@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   document.addEventListener('scroll', () => {
     if (screenWidth) {
-      navResponsive.style.transform = "translateY(" + window.scrollY + "px";
-      nav.style.transform = "translateY(" + window.scrollY + "px";
+      navResponsive.style.transform = "translateY(" + window.scrollY + "px)";
+      nav.style.transform = "translateY(" + window.scrollY + "px)";
     }
   });
   
